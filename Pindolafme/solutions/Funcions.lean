@@ -9,7 +9,7 @@ Exercici "Imatge d'una successió per una funció contínua"
   Conclusió: (f ∘ u) convergeix a f x₀
 
 Demostració:
-
+  --sorry
   Demostrem que ∀ ε > 0, ∃ N, ∀ n ≥ N, |f (u n) - f x₀| ≤ ε
   Sigui ε > 0
   Com que f és contínua a x₀ and ε > 0 obtenim δ tal que
@@ -19,7 +19,7 @@ Demostració:
   Sigui n ≥ N
   Com que ∀ x, |x - x₀| ≤ δ → |f x - f x₀| ≤ ε només cal demostrar que |u n - x₀| ≤ δ
   Com que ∀ n ≥ N, |u n - x₀| ≤ δ and n ≥ N concloem que |u n - x₀| ≤ δ
-
+  --sorry
 QED
 
 Exemple "Les successions constants són convergents."
@@ -27,6 +27,7 @@ Exemple "Les successions constants són convergents."
   Hipòtesis: (h : ∀ n, u n = l)
   Conclusió: u convergeix a l
 Demostració:
+  --sorry
   Sigui ε > 0
   Demostrem que ∃ N, ∀ n ≥ N, |u n - l| ≤ ε
   Demostrem que 0 funciona
@@ -34,6 +35,7 @@ Demostració:
   Calc |u n - l| = |l - l| per Reescrivim utilitzant h
    _             = 0       per Calculem
    _             ≤ ε       per Concloem amb ε_pos
+  --sorry
 QED
 
 Exemple "Una successió amb límit positiu és eventualment positiva."
@@ -41,12 +43,14 @@ Exemple "Una successió amb límit positiu és eventualment positiva."
   Hipòtesis: (hl : l > 0) (h : u convergeix a l)
   Conclusió: ∃ N, ∀ n ≥ N, u n ≥ l/2
 Demostració:
+  --sorry
   Per h aplicat a l/2 utilitzant que l/2 > 0 obtenim N tal que hN : ∀ n ≥ N, |u n - l| ≤ l/2
   Demostrem que N funciona
   Sigui n ≥ N
   Per hN aplicat a n utilitzant que n ≥ N obtenim hN' : |u n - l| ≤ l/2
   Per hN' obtenim (h₁ : -(l/2) ≤ u n - l) (h₂ : u n - l ≤ l/2)
   Concloem amb h₁
+  --sorry
 QED
 
 
@@ -55,6 +59,7 @@ Exemple "Suma de successions convergents."
   Hipòtesis: (hu : u convergeix a U) (hv : v convergeix a V)
   Conclusió: (u + v) convergeix a U +V
 Demostració:
+  --sorry
   Sigui ε > 0
   Per hu aplicat a ε/2 utilitzant que ε/2 > 0 obtenim N₁
       tal que (hN₁ : ∀ n ≥ N₁, |u n - U| ≤ ε / 2)
@@ -72,6 +77,7 @@ Demostració:
                       _ ≤ |u n - U| + |v n - V|      per Apliquem abs_add
                       _ ≤  ε/2 + ε/2                 per Combinem [fact₁, fact₂]
                       _ =  ε                         per Calculem
+  --sorry
 QED
 
 Exemple "El teorema de l'entrepà"
@@ -81,6 +87,7 @@ Exemple "El teorema de l'entrepà"
     (h' : ∀ n, v n ≤ w n)
   Conclusió: v convergeix a l
 Demostració:
+  --sorry
   Demostrem que ∀ ε > 0, ∃ N, ∀ n ≥ N, |v n - l| ≤ ε
   Sigui ε > 0
   Com que u convergeix a l and ε > 0 obtenim N tal que hN : ∀ n ≥ N, |u n - l| ≤ ε
@@ -99,12 +106,14 @@ Demostració:
   Demostrem ara que v n - l ≤ ε
   Calc v n - l ≤ w n - l  perquè v n ≤ w n
       _        ≤ ε        per assumption
+  --sorry
 QED
 
 Exemple "Una reformulació de la definició de convergència"
   Dades:  (u : ℕ → ℝ) (l : ℝ)
   Conclusió: (u convergeix a l) ⇔ ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - l| < ε
 Demostració:
+  --sorry
   Demostrem primer que (u convergeix a l) ⇒ ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - l| < ε
   Suposem hyp : u convergeix a l
   Sigui ε > 0
@@ -121,6 +130,7 @@ Demostració:
   Demostrem que N funciona
   Sigui n ≥ N
   Concloem amb hN aplicat a n utilitzant que n ≥ N
+  --sorry
 QED
 
 
@@ -129,6 +139,7 @@ Exemple "Unicitat del límit."
   Hipòtesis: (h : u convergeix a l) (h': u convergeix a l')
   Conclusió: l = l'
 Demostració:
+  --sorry
   Per eq_of_forall_dist_le només cal demostrar que ∀ ε > 0, |l - l'| ≤ ε
   Sigui ε > 0
   Per h aplicat a ε/2 utilitzant que ε/2 > 0 obtenim N
@@ -143,6 +154,7 @@ Demostració:
   _             ≤ |l - u (max N N')| + |u (max N N') - l'| per Apliquem abs_add
   _             = |u (max N N') - l| + |u (max N N') - l'| per Reescrivim utilitzant abs_sub_comm
   _             ≤ ε                                        per Combinem [hN₁, hN'₁]
+  --sorry
 QED
 
 
@@ -151,6 +163,7 @@ Exemple "Una successió creixent amb suprem finit el té com a límit."
   Hipòtesis: (h : M és un suprem de u) (h' : u és creixent)
   Conclusió: u convergeix a M
 Demostració:
+  --sorry
   Sigui ε > 0
   Per h obtenim (inf_M : ∀ (n : ℕ), u n ≤ M)
     (sup_M_ep : ∀ ε > 0, ∃ (n₀ : ℕ), u n₀ ≥ M - ε)
@@ -163,4 +176,5 @@ Demostració:
     Combinem [h'', hn₀]
   Demostrem ara que u n - M ≤ ε
   ·  Combinem [inf_M', ε_pos]
+  --sorry
 QED
