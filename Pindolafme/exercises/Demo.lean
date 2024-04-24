@@ -14,9 +14,6 @@ Demostració:
   sorry
 QED
 
--- Pel següent exercici és útil conèixer el lema sum_range_succ:
---  sum_range_succ (f : ℕ → β) (n : ℕ) :
---    ∑ x in range (n + 1), f x = ∑ x in range n, f x + f n
 
 Exemple "La suma dels primers enters"
   Conclusió: ∀ n, ∑ k in range (n + 1), (k : ℝ) = n * (n + 1) / 2
@@ -33,7 +30,6 @@ def Fib : ℕ → ℕ
 | 1 => 1
 | (n + 2) => Fib n + Fib (n+1)
 
-
 Exercici  "Parcial 2024 (Fibonacci)"
 
   Conclusió: ∀ n, (1 + ∑ i in range n, Fib i = Fib (n+1))
@@ -47,7 +43,6 @@ section funcions
 
 variable {X Y Z : Type}
 variable (f : X → Y) (g : Y → Z)
-
 
 Exemple "Si g ∘ f és injectiva aleshores f també ho és."
 
@@ -67,10 +62,7 @@ QED
 
 end funcions
 
--- Pel següent exercici és útil conèixer el lema even_of_even_sq:
---  even_of_even_sq {m : ℕ} (h : 2 ∣ m ^ 2) : 2 ∣ m
--- i el lema Nat.dvd_gcd:
---  Nat.dvd_gcd {k m n : ℕ} (hm : k ∣ m) (hn : k ∣ n) : k ∣ m.gcd n
+#check even_of_even_sq
 
 Exemple "L'arrel quadrada de 2 és irracional"
 
@@ -90,4 +82,3 @@ Exemple "Anells"
 Demostració:
   sorry
 QED
-
