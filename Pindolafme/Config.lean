@@ -13,14 +13,6 @@ import Mathlib.Topology.MetricSpace.Basic
 import Lean
 open Lean Elab Tactic
 
-elab "tada" : tactic => do
-  let gs ← getUnsolvedGoals
-  if gs.isEmpty then
-    logInfo "Goals accomplished 🎉"
-  else
-    Term.reportUnsolvedGoals gs
-    throwAbortTactic
-
 lemma induccio (P : ℕ → Prop) (h₀ : P 0)
 (h_ind : ∀ n, (P n → P (n+1))) : ∀ n, P n := fun n => Nat.recAux h₀ h_ind n
 
@@ -56,19 +48,6 @@ notation3 M " és un suprem de " u => es_suprem M u
 configureUnfoldableDefs funcio_continua_a succ_convergeix creixent es_suprem
   Function.Injective Function.Surjective IsUnit
 
-section Subset
-variable {α : Type*}
-
-/- The Mathlib definition of `Set.Subset` uses a strict-implicit
-argument which confuses Verbose Lean. So let us replace it. -/
-
-protected def Verbose.Catalan.Subset (s₁ s₂ : Set α) :=
-  ∀ a, a ∈ s₁ → a ∈ s₂
-
-instance (priority := high) Verbose.Catalan.hasSubset : HasSubset (Set α) :=
-  ⟨Verbose.Catalan.Subset⟩
-
-end Subset
 
 open Verbose.Catalan
 setLang ca
